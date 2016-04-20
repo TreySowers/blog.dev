@@ -15,3 +15,26 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/', 'HomeController@showWelcome');
+
+Route::get('/resume', 'HomeController@showResume');
+
+Route::get('/my-resume', 'HomeController@showMyResume');
+
+Route::get('/portfolio', 'HomeController@showPortfolio');
+
+Route::get('/my-portfolio', 'HomeController@showMyPortfolio');
+
+Route::get('/random-guess', 'HomeController@randomguess');
+
+Route::get('/roll-dice/{guess?}', 'HomeController@rolldice');
+
+Route::get('/forecast', 'HomeController@showForecast');
+
+Route::resource('posts', 'PostsController');
+
+
+
+
+	
